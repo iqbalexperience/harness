@@ -165,7 +165,7 @@ const r = await agent(
 ```
 
 - `agentType` 생략 시 기본 워크플로우 서브에이전트
-- `model`은 단계별 업무 특성으로 선택 — 기계적 수집·변환 단계는 `sonnet`, 심층 검증·심판·설계 단계는 `opus`, 종합 계획·장기 실행 단계는 `fable` (상세: `model-selection-guide.md`)
+- `model`은 단계별 업무 특성으로 선택 — 기계적 수집·변환 단계는 `sonnet`, 심층 검증·심판·설계 및 종합 계획·장기 실행 단계는 `opus` (상세: `model-selection-guide.md`)
 - 병렬 파일 수정 에이전트에는 `isolation: 'worktree'` — 셋업 비용이 있으므로 정말 충돌하는 경우에만
 
 ## 7. 함정 목록 (검증 체크리스트)
