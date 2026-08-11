@@ -1,6 +1,6 @@
 # Experimental Flag Dependency
 
-> **Status:** Active · **Owner:** revfactory · **Last updated:** 2026-04-18 · **SLA:** See [Monitoring Commitment](#monitoring-commitment)
+> **Status:** Active · **Owner:** iqbalexperience · **Last updated:** 2026-04-18 · **SLA:** See [Monitoring Commitment](#monitoring-commitment)
 
 This document explains why `harness` requires `CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1`, the three plausible futures of that flag, and what this repository will do in each case — with time-boxed commitments so enterprise adopters can plan against it.
 

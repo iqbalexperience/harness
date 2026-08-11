@@ -1,16 +1,18 @@
 {
   "name": "harness",
-  "description": "The team-architecture factory for Claude Code — a meta-skill that turns a domain description into an agent team and the skills they use, with six pre-defined team-architecture patterns (Pipeline, Fan-out/Fan-in, Expert Pool, Producer-Reviewer, Supervisor, Hierarchical Delegation). Claude Code용 팀 아키텍처 팩토리: 도메인 한 문장을 에이전트 팀과 스킬 세트로 변환하는 메타 스킬.",
+  "description": "The team-architecture factory for AI agents — a meta-skill that turns a domain description into an agent team and the skills they use, with six pre-defined team-architecture patterns (Pipeline, Fan-out/Fan-in, Expert Pool, Producer-Reviewer, Supervisor, Hierarchical Delegation).",
   "version": "1.2.0",
   "author": {
-    "name": "robin",
-    "url": "https://github.com/revfactory"
+    "name": "iqbalexperience",
+    "url": "https://github.com/iqbalexperience"
   },
-  "homepage": "https://github.com/revfactory/harness",
-  "repository": "https://github.com/revfactory/harness",
+  "homepage": "https://github.com/iqbalexperience/harness",
+  "repository": "https://github.com/iqbalexperience/harness",
   "license": "Apache-2.0",
   "keywords": [
     "harness",
+    "agent-skills",
+    "vercel-skills",
     "harness-factory",
     "team-architecture-factory",
     "agent-team",

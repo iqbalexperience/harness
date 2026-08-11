@@ -2,43 +2,42 @@
 
 > **Time budget: 5 minutes (strict).** If you are not at Step 5 within 5 minutes, stop and file an issue — that is a bug in this document, not a bug in you.
 
-<!-- TODO: Loom embed — 60s screen recording showing Steps 1→5 end-to-end. Replace this comment with the `<iframe>` once recorded. -->
-
-**What you will have at the end:** a working `.claude/agents/` directory with 3–5 domain-specialized agents, generated from a single-sentence prompt, ready to run on a sample task.
+**What you will have at the end:** a working `.agents/agents/` (or `.claude/agents/`) directory with 3–5 domain-specialized agents, generated from a single-sentence prompt, ready to run on a sample task.
 
 **Prerequisites (check before starting):**
-- Claude Code **v2.x or later** (`claude --version` should return `2.x` or higher)
-- A shell that persists `export` across commands (bash, zsh, or fish)
-- Network access to `github.com` and `api.anthropic.com`
+- Node.js & `npx` installed (for `npx skills`)
+- An AI coding agent runner (Claude Code, Cursor, Windsurf, Copilot, Antigravity, Cline, Roo Code, etc.)
+- Network access to `github.com`
 
 ---
 
-## Step 1 — Add the marketplace (60 seconds)
+## Step 1 — Install Harness via Vercel Skills CLI (30 seconds)
 
 ```bash
-claude plugin marketplace add revfactory/harness
+npx skills add iqbalexperience/harness
 ```
 
-**What this does:** Registers the `harness` marketplace so Claude Code can discover plugins published by `revfactory`.
+Or for current local development project:
 
-**Expected output:** `Added marketplace: revfactory/harness`
+```bash
+npx skills add .
+```
+
+**What this does:** Installs the `harness` skill package directly into your project's agent skills directory (`.agents/skills/` or `.claude/skills/`).
+
+*(Alternative for Claude Code plugin users: `claude plugin marketplace add iqbalexperience/harness` followed by `claude plugin install harness@harness`)*
 
 ---
 
-## Step 2 — Install the plugin and enable the Experimental flag (40 seconds)
+## Step 2 — Enable Agent Teams / Multi-Agent Mode (30 seconds)
 
 ```bash
-claude plugin install harness@harness
 export CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1
 ```
 
 *(To persist the flag across shell sessions, append the `export` line to `~/.zshrc` or `~/.bashrc`.)*
 
-**What this does:** Installs the `harness` plugin from the `harness` marketplace, then enables Agent Teams — the Claude Code API harness uses to orchestrate multi-agent workflows. See [`docs/experimental-dependency.md`](./experimental-dependency.md) for why the flag is required.
-
-**Failure FAQ #1 — `AGENT_TEAMS not found` / teams don't instantiate**
-**Cause:** Claude Code version is older than v2.x (Agent Teams was introduced in v2.0).
-**Fix:** Run `claude --version`. If below 2.0, upgrade via `npm i -g @anthropic-ai/claude-code` (or your distribution's installer), then repeat Step 2.
+**What this does:** Enables Agent Teams — the multi-agent system harness uses to orchestrate specialized workflows. See [`docs/experimental-dependency.md`](./experimental-dependency.md).
 
 ---
 
@@ -111,7 +110,7 @@ At this point you should have:
 
 **Next reads:**
 - [`docs/experimental-dependency.md`](./experimental-dependency.md) — Why the flag, and what we'll do when it changes
-- [`revfactory/harness-100`](https://github.com/revfactory/harness-100) — Catalog of 100+ pre-built domain harnesses, if you'd rather clone than generate
-- [`revfactory/claude-code-harness`](https://github.com/revfactory/claude-code-harness) — The A/B test harness we used to measure +60% quality on 15 tasks
+- [`iqbalexperience/harness-100`](https://github.com/iqbalexperience/harness-100) — Catalog of 100+ pre-built domain harnesses, if you'd rather clone than generate
+- [`iqbalexperience/claude-code-harness`](https://github.com/iqbalexperience/claude-code-harness) — The A/B test harness we used to measure +60% quality on 15 tasks
 
 **If you hit something this guide didn't cover:** open an issue with the `quickstart-gap` label and include: (a) which step failed, (b) `claude --version`, (c) the exact error message. The SLA for quickstart-gap issues is **48 hours** to first response (see `CONTRIBUTING.md`).

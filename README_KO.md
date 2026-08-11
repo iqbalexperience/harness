@@ -5,10 +5,11 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.2.0-brightgreen.svg" alt="Version">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"></a>
-  <img src="https://img.shields.io/badge/Claude_Code-Plugin-purple.svg" alt="Claude Code Plugin">
+  <img src="https://img.shields.io/badge/Agent_Skills-Open_Ecosystem-black.svg" alt="Open Agent Skills">
+  <img src="https://img.shields.io/badge/Vercel_Skills-npx_skills_add-blue.svg" alt="Vercel Skills">
   <img src="https://img.shields.io/badge/Patterns-6_Architectures-orange.svg" alt="6 Architecture Patterns">
   <img src="https://img.shields.io/badge/Mode-Agent_Teams-green.svg" alt="Agent Teams">
-  <a href="https://github.com/revfactory/harness/stargazers"><img src="https://img.shields.io/github/stars/revfactory/harness?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/iqbalexperience/harness/stargazers"><img src="https://img.shields.io/github/stars/iqbalexperience/harness?style=social" alt="GitHub Stars"></a>
 </p>
 
 <p align="center">
@@ -17,19 +18,19 @@
   <a href="#"><img src="https://img.shields.io/badge/README-EN%20%7C%20KO%20%7C%20JA-lightgrey" alt="i18n"></a>
 </p>
 
-# Harness — Claude Code를 위한 팀 아키텍처 팩토리
+# Harness — AI 에이전트를 위한 팀 아키텍처 팩토리
 
 [English](README.md) | **한국어** | [日本語](README_JA.md)
 
-> **Harness는 Claude Code용 팀 아키텍처 팩토리입니다.** **"하네스 구성해줘"** (한국어) · **"build a harness for this project"** (English) · **"ハーネスを構成して"** (日本語) 한 문장으로, 플러그인이 도메인 설명을 에이전트 팀과 그들이 쓸 스킬로 변환합니다 — 사전 정의된 6가지 팀 아키텍처 패턴 중 하나를 골라서요.
+> **Harness는 Open Agent Skills 생태계의 AI 에이전트용 팀 아키텍처 팩토리입니다.** 한 줄 명령어(`npx skills add iqbalexperience/harness`)로 프로젝트에 설치할 수 있습니다. **"하네스 구성해줘"** (한국어) · **"build a harness for this project"** (English) · **"ハーネスを構成して"** (日本語) 한 문장으로, 사용자의 도메인 설명을 에이전트 팀과 그들이 쓸 스킬로 변환합니다 — 사전 정의된 6가지 팀 아키텍처 패턴 중 하나를 골라서요.
 
 ## 개요
 
-Harness는 Claude Code의 에이전트 팀 시스템을 활용하여 복잡한 작업을 전문 에이전트 팀으로 분해·조율하는 아키텍처 도구다. "하네스 구성해줘"라고 말하면, 사용자의 도메인에 맞는 에이전트 정의(`.claude/agents/`)와 스킬(`.claude/skills/`)을 자동 생성한다.
+Harness는 멀티 에이전트 시스템을 활용하여 복잡한 작업을 전문 에이전트 팀으로 분해·조율하는 아키텍처 도구다. "하네스 구성해줘"라고 말하면, 사용자의 도메인에 맞는 에이전트 정의(`.agents/agents/` 또는 `.claude/agents/`)와 스킬(`.agents/skills/` 또는 `.claude/skills/`)을 자동 생성한다.
 
 ## 카테고리 — Harness는 어디에 서 있나요
 
-Harness는 Claude Code 생태계의 **L3 Meta-Factory** 층 — 다른 하네스들이 아니라 "다른 하네스들을 생성하는 층" — 에 자리합니다. 그 층 안에서 우리는 **Team-Architecture Factory** 서브 층을 선택합니다.
+Harness는 AI 에이전트 생태계의 **L3 Meta-Factory** 층 — 다른 하네스들이 아니라 "다른 하네스들을 생성하는 층" — 에 자리합니다. 그 층 안에서 우리는 **Team-Architecture Factory** 서브 층을 선택합니다.
 
 | 층위 | 하는 일 | 공존하는 이웃 |
 |------|---------|---------------|
@@ -42,6 +43,7 @@ Harness는 Claude Code 생태계의 **L3 Meta-Factory** 층 — 다른 하네스
 
 ## 핵심 기능
 
+- **Vercel Skills & Open Agent Skills 생태계 지원** — 단일 명령어로 모든 AI 에이전트 환경(Claude Code, Cursor, Windsurf, Copilot, Antigravity, Cline, Roo Code 등)에 즉시 설치
 - **에이전트 팀 설계** — 파이프라인, 팬아웃/팬인, 전문가 풀, 생성-검증, 감독자, 계층적 위임 등 6가지 아키텍처 패턴 지원
 - **스킬 생성** — Progressive Disclosure 패턴으로 컨텍스트를 효율 관리하는 스킬 자동 생성
 - **오케스트레이션** — 에이전트 간 데이터 전달, 에러 핸들링, 팀 조율 프로토콜 포함
@@ -60,7 +62,7 @@ Harness는 Claude Code 생태계의 **L3 Meta-Factory** 층 — 다른 하네스
                                     └───────────────┘
 ```
 
-이것이 **하네스 진화 메커니즘 (Harness Evolution Mechanism; JA: ハーネス進化メカニズム)** 입니다.
+이것이 **하네스 진화 메커니즘 (Harness Evolution Mechanism; JA: ハーネス進化メカ니즘)** 입니다.
 
 ## 워크플로우
 
@@ -69,9 +71,9 @@ Phase 1: 도메인 분석
     ↓
 Phase 2: 팀 아키텍처 설계 (에이전트 팀 vs 서브 에이전트)
     ↓
-Phase 3: 에이전트 정의 생성 (.claude/agents/)
+Phase 3: 에이전트 정의 생성 (.agents/agents/ 또는 .claude/agents/)
     ↓
-Phase 4: 스킬 생성 (.claude/skills/)
+Phase 4: 스킬 생성 (.agents/skills/ 또는 .claude/skills/)
     ↓
 Phase 5: 통합 및 오케스트레이션
     ↓
@@ -80,22 +82,39 @@ Phase 6: 검증 및 테스트
 
 ## 설치
 
-### 마켓플레이스 등록 후 설치
+### 옵션 1: Vercel Skills CLI / Agent Skills 생태계 (권장)
 
-#### 마켓플레이스 추가
+`npx skills` 명령어로 프로젝트에 직접 설치:
+
 ```shell
-/plugin marketplace add revfactory/harness
+npx skills add iqbalexperience/harness
 ```
 
-#### 플러그인 설치
+현재 프로젝트 디렉토리에서 로컬 설치:
+
 ```shell
-/plugin install harness-marketplace
+npx skills add .
 ```
 
-### 글로벌 스킬로 직접 설치
+모든 프로젝트에 글로벌 설치:
 
 ```shell
-# skills 디렉토리를 ~/.claude/skills/harness/에 복사
+npx skills add -g iqbalexperience/harness
+```
+
+### 옵션 2: Claude Code 마켓플레이스 등록 후 설치
+
+```shell
+/plugin marketplace add iqbalexperience/harness
+/plugin install harness@harness-marketplace
+```
+
+### 옵션 3: 글로벌 스킬로 직접 수동 설치
+
+```shell
+# 글로벌 스킬 디렉토리에 복사
+cp -r skills/harness ~/.agents/skills/harness
+# 또는 Claude Code용:
 cp -r skills/harness ~/.claude/skills/harness
 ```
 
@@ -103,6 +122,8 @@ cp -r skills/harness ~/.claude/skills/harness
 
 ```
 harness/
+├── SKILL.md                        # 루트 스킬 정의 (Vercel Skills 표준)
+├── skills.json                     # Agent Skills 매니페스트
 ├── .claude-plugin/
 │   └── plugin.json                 # 플러그인 매니페스트
 ├── skills/
@@ -238,11 +259,11 @@ Harness는 Claude Code / 에이전트 프레임워크 생태계에서 혼자가 
 
 ### Harness 100
 
-**[revfactory/harness-100](https://github.com/revfactory/harness-100)** — 10개 도메인, 100개의 프로덕션 레디 에이전트 팀 하네스 (한영 200패키지). 각 하네스에 4-5명의 전문 에이전트, 오케스트레이터 스킬, 도메인 특화 스킬이 포함되어 있으며, 모두 이 플러그인으로 생성되었습니다. 콘텐츠 제작, 소프트웨어 개발, 데이터/AI, 비즈니스 전략, 교육, 법률, 헬스케어 등 1,808개 마크다운 파일.
+**[iqbalexperience/harness-100](https://github.com/iqbalexperience/harness-100)** — 10개 도메인, 100개의 프로덕션 레디 에이전트 팀 하네스 (한영 200패키지). 각 하네스에 4-5명의 전문 에이전트, 오케스트레이터 스킬, 도메인 특화 스킬이 포함되어 있으며, 모두 이 플러그인으로 생성되었습니다. 콘텐츠 제작, 소프트웨어 개발, 데이터/AI, 비즈니스 전략, 교육, 법률, 헬스케어 등 1,808개 마크다운 파일.
 
 ### 연구: Harness 적용 전후 A/B 테스트
 
-**[revfactory/claude-code-harness](https://github.com/revfactory/claude-code-harness)** — 15개 소프트웨어 엔지니어링 과제에 대한 통제 실험으로, 구조화된 사전 설정이 LLM 코드 에이전트 출력 품질에 미치는 영향을 측정했습니다.
+**[iqbalexperience/claude-code-harness](https://github.com/iqbalexperience/claude-code-harness)** — 15개 소프트웨어 엔지니어링 과제에 대한 통제 실험으로, 구조화된 사전 설정이 LLM 코드 에이전트 출력 품질에 미치는 영향을 측정했습니다.
 
 | 지표 | Harness 미적용 | Harness 적용 | 개선 |
 |------|:-:|:-:|:-:|
@@ -268,7 +289,7 @@ Harness는 Claude Code / 에이전트 프레임워크 생태계에서 혼자가 
 **A.** +60%는 **저자 자체 A/B(n=15, 15개 과제, 자매 저장소 `claude-code-harness`에서 측정)** 결과입니다. 본 저장소는 이 수치를 인용할 때 언제나 "n=15, 저자 자체 측정, 제3자 재현 진행 중"을 같은 문장 안에 병기합니다. 조직 도입 시에는 2~4주 내부 파일럿으로 자체 수치를 측정할 것을 권장합니다.
 
 **Evidence:**
-- 저자 A/B: [revfactory/claude-code-harness](https://github.com/revfactory/claude-code-harness)
+- 저자 A/B: [iqbalexperience/claude-code-harness](https://github.com/iqbalexperience/claude-code-harness)
 - 논문: *Hwang, M. (2026). Harness: Structured Pre-Configuration for Enhancing LLM Code Agent Output Quality*
 </details>
 

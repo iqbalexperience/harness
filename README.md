@@ -5,10 +5,11 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.2.0-brightgreen.svg" alt="Version">
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License"></a>
-  <img src="https://img.shields.io/badge/Claude_Code-Plugin-purple.svg" alt="Claude Code Plugin">
+  <img src="https://img.shields.io/badge/Agent_Skills-Open_Ecosystem-black.svg" alt="Open Agent Skills">
+  <img src="https://img.shields.io/badge/Vercel_Skills-npx_skills_add-blue.svg" alt="Vercel Skills">
   <img src="https://img.shields.io/badge/Patterns-6_Architectures-orange.svg" alt="6 Architecture Patterns">
   <img src="https://img.shields.io/badge/Mode-Agent_Teams-green.svg" alt="Agent Teams">
-  <a href="https://github.com/revfactory/harness/stargazers"><img src="https://img.shields.io/github/stars/revfactory/harness?style=social" alt="GitHub Stars"></a>
+  <a href="https://github.com/iqbalexperience/harness/stargazers"><img src="https://img.shields.io/github/stars/iqbalexperience/harness?style=social" alt="GitHub Stars"></a>
 </p>
 
 <p align="center">
@@ -17,19 +18,19 @@
   <a href="#"><img src="https://img.shields.io/badge/README-EN%20%7C%20KO%20%7C%20JA-lightgrey" alt="i18n"></a>
 </p>
 
-# Harness — The Team-Architecture Factory for Claude Code
+# Harness — The Team-Architecture Factory for AI Agents
 
 **English** | [한국어](README_KO.md) | [日本語](README_JA.md)
 
-> **Harness is a team-architecture factory for Claude Code.** Say **"build a harness for this project"** (English) or **"하네스 구성해줘"** (한국어) or **"ハーネスを構成して"** (日本語), and the plugin turns your domain description into an agent team and the skills they use — picked from six pre-defined team-architecture patterns.
+> **Harness is a team-architecture factory for AI Agents in The Open Agent Skills Ecosystem.** Install with a single command (`npx skills add iqbalexperience/harness`). Say **"build a harness for this project"** (English) or **"하네스 구성해줘"** (한국어) or **"ハーネスを構成して"** (日本語), and Harness turns your domain description into an agent team and the skills they use — picked from six pre-defined team-architecture patterns.
 
 ## Overview
 
-Harness leverages Claude Code's agent team system to decompose complex tasks into coordinated teams of specialized agents. Say "build a harness for this project" and it automatically generates agent definitions (`.claude/agents/`) and skills (`.claude/skills/`) tailored to your domain.
+Harness leverages the multi-agent system to decompose complex tasks into coordinated teams of specialized agents. Say "build a harness for this project" and it automatically generates agent definitions (`.agents/agents/` or `.claude/agents/`) and skills (`.agents/skills/` or `.claude/skills/`) tailored to your domain.
 
 ## Category — Where Harness Sits
 
-Harness lives at the **L3 Meta-Factory** layer of the Claude Code ecosystem — the layer that generates other harnesses rather than being one. Inside L3, we pick a specific sub-layer: **Team-Architecture Factory**.
+Harness lives at the **L3 Meta-Factory** layer of the AI Agent Ecosystem — the layer that generates other harnesses rather than being one. Inside L3, we pick a specific sub-layer: **Team-Architecture Factory**.
 
 | Layer | What it does | Neighbors we coexist with |
 |-------|--------------|---------------------------|
@@ -42,17 +43,18 @@ Harness lives at the **L3 Meta-Factory** layer of the Claude Code ecosystem — 
 
 ## Star History
 
-<a href="https://www.star-history.com/?repos=revfactory%2Fharness&type=date&legend=top-left">
+<a href="https://www.star-history.com/?repos=iqbalexperience%2Fharness&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=revfactory/harness&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=revfactory/harness&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=revfactory/harness&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=iqbalexperience/harness&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=iqbalexperience/harness&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=iqbalexperience/harness&type=date&legend=top-left" />
  </picture>
 </a>
 
 
 ## Key Features
 
+- **Vercel Skills & Open Ecosystem Compatible** — Single-command installation for any AI agent framework (Claude Code, Cursor, Windsurf, Copilot, Antigravity, Cline, Roo Code, AI SDK, Swarm, etc.)
 - **Agent Team Design** — 6 architectural patterns: Pipeline, Fan-out/Fan-in, Expert Pool, Producer-Reviewer, Supervisor, and Hierarchical Delegation
 - **Skill Generation** — Auto-generates skills with Progressive Disclosure for efficient context management
 - **Orchestration** — Inter-agent data passing, error handling, and team coordination protocols
@@ -66,9 +68,9 @@ Phase 1: Domain Analysis
     ↓
 Phase 2: Team Architecture Design (Agent Teams vs Subagents)
     ↓
-Phase 3: Agent Definition Generation (.claude/agents/)
+Phase 3: Agent Definition Generation (.agents/agents/ or .claude/agents/)
     ↓
-Phase 4: Skill Generation (.claude/skills/)
+Phase 4: Skill Generation (.agents/skills/ or .claude/skills/)
     ↓
 Phase 5: Integration & Orchestration
     ↓
@@ -77,22 +79,39 @@ Phase 6: Validation & Testing
 
 ## Installation
 
-### Via Marketplace
+### Option 1: Via Vercel Skills CLI / Agent Skills Ecosystem (Recommended)
 
-#### Add the marketplace
+Install directly into any project using `npx skills`:
+
 ```shell
-/plugin marketplace add revfactory/harness
+npx skills add iqbalexperience/harness
 ```
 
-#### Install the plugin
+Or install locally from current project directory:
+
 ```shell
+npx skills add .
+```
+
+To install globally across all projects:
+
+```shell
+npx skills add -g iqbalexperience/harness
+```
+
+### Option 2: Via Claude Code Plugin Marketplace
+
+```shell
+/plugin marketplace add iqbalexperience/harness
 /plugin install harness@harness-marketplace
 ```
 
-### Direct Installation as Global Skill
+### Option 3: Manual Installation as Global Skill
 
 ```shell
-# Copy the skills directory to ~/.claude/skills/harness/
+# Copy the skills directory to global skills folder:
+cp -r skills/harness ~/.agents/skills/harness
+# Or for Claude Code:
 cp -r skills/harness ~/.claude/skills/harness
 ```
 
@@ -100,6 +119,8 @@ cp -r skills/harness ~/.claude/skills/harness
 
 ```
 harness/
+├── SKILL.md                        # Root skill definition (Vercel Skills standard)
+├── skills.json                     # Agent Skills repository manifest
 ├── .claude-plugin/
 │   └── plugin.json                 # Plugin manifest
 ├── skills/
@@ -111,6 +132,9 @@ harness/
 │           ├── team-examples.md           # 5 real-world team configurations
 │           ├── skill-writing-guide.md     # Skill authoring guide
 │           ├── skill-testing-guide.md     # Testing & evaluation methodology
+│           └── qa-agent-guide.md          # QA agent integration guide
+└── README.md
+```│           ├── skill-testing-guide.md     # Testing & evaluation methodology
 │           └── qa-agent-guide.md          # QA agent integration guide
 └── README.md
 ```
@@ -242,11 +266,11 @@ Harness is not alone in the Claude Code / agent-framework ecosystem. The followi
 
 ### Harness 100
 
-**[revfactory/harness-100](https://github.com/revfactory/harness-100)** — 100 production-ready agent team harnesses across 10 domains, available in both English and Korean (200 packages total). Each harness ships with 4-5 specialist agents, an orchestrator skill, and domain-specific skills — all generated by this plugin. 1,808 markdown files covering content creation, software development, data/AI, business strategy, education, legal, health, and more.
+**[iqbalexperience/harness-100](https://github.com/iqbalexperience/harness-100)** — 100 production-ready agent team harnesses across 10 domains, available in both English and Korean (200 packages total). Each harness ships with 4-5 specialist agents, an orchestrator skill, and domain-specific skills — all generated by this plugin. 1,808 markdown files covering content creation, software development, data/AI, business strategy, education, legal, health, and more.
 
 ### Research: A/B Testing Harness Effectiveness
 
-**[revfactory/claude-code-harness](https://github.com/revfactory/claude-code-harness)** — A controlled experiment across 15 software engineering tasks measuring the impact of structured pre-configuration on LLM code agent output quality.
+**[iqbalexperience/claude-code-harness](https://github.com/iqbalexperience/claude-code-harness)** — A controlled experiment across 15 software engineering tasks measuring the impact of structured pre-configuration on LLM code agent output quality.
 
 | Metric | Without Harness | With Harness | Improvement |
 |--------|:-:|:-:|:-:|
@@ -272,7 +296,7 @@ Key finding: effectiveness scales with task complexity — the harder the task, 
 **A.** The +60% figure comes from an **author-measured A/B (n=15, 15 tasks, measured on the sister repo `claude-code-harness`)**. Every citation in this repo pairs the number with the disclosure "n=15, author-measured, third-party replications pending" in the same sentence. For adoption decisions, we recommend running a 2–4 week internal pilot and measuring your own numbers.
 
 **Evidence:**
-- Author A/B: [revfactory/claude-code-harness](https://github.com/revfactory/claude-code-harness)
+- Author A/B: [iqbalexperience/claude-code-harness](https://github.com/iqbalexperience/claude-code-harness)
 - Paper: *Hwang, M. (2026). Harness: Structured Pre-Configuration for Enhancing LLM Code Agent Output Quality*
 </details>
 

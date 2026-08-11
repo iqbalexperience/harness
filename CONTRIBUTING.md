@@ -39,7 +39,7 @@ Different kinds of contributions go through different entry points. Pick the one
 
 ### Question
 
-- Open an issue using the **Question** form, **or** start a thread in [GitHub Discussions](https://github.com/revfactory/harness/discussions) if the matter is open-ended.
+- Open an issue using the **Question** form, **or** start a thread in [GitHub Discussions](https://github.com/iqbalexperience/harness/discussions) if the matter is open-ended.
 
 ### Discussion (RFC-sized ideas)
 
@@ -78,17 +78,20 @@ We track this dependency in `docs/experimental-dependency.md` (if Anthropic prom
 
 ### Local plugin link
 
-To test your changes in a local Claude Code session without publishing to the marketplace:
+To test your changes in a local project session using Vercel Skills / Open Agent Skills Ecosystem:
 
 ```bash
-# From your checkout
-claude plugin link ./harness
-
-# Verify
-claude plugin list | grep harness
+# From target project directory (pointing to local harness checkout)
+npx skills add /path/to/harness
+# Or within harness repo checkout:
+npx skills add .
 ```
 
-Unlink with `claude plugin unlink harness` when you're done.
+Or for Claude Code plugin testing:
+
+```bash
+claude plugin link ./harness
+```
 
 ### Running the meta-skill
 
@@ -96,7 +99,7 @@ Unlink with `claude plugin unlink harness` when you're done.
 claude "build a harness for a fintech risk-assessment team"
 ```
 
-Scaffolded agents and skills land under `.claude/agents/` and `.claude/skills/` in the target project.
+Scaffolded agents and skills land under `.agents/agents/` (or `.claude/agents/`) and `.agents/skills/` (or `.claude/skills/`) in the target project.
 
 ### Tests & lints
 
@@ -197,7 +200,7 @@ Report Code of Conduct violations privately to `robin.hwang@kakaocorp.com` with 
 
 | Role | Handle | Area |
 |------|--------|------|
-| Lead maintainer | [@revfactory](https://github.com/revfactory) | Project direction, releases, final review |
+| Lead maintainer | [@iqbalexperience](https://github.com/iqbalexperience) | Project direction, releases, final review |
 | Contributor | [@hnts03](https://github.com/hnts03) | Skill templates, Korean documentation |
 | Contributor | [@JunghwanNA](https://github.com/JunghwanNA) | Agent patterns, integration tests |
 | Contributor | [@shaun0927](https://github.com/shaun0927) | Tooling, CI, infra |
